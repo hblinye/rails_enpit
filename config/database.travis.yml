@@ -1,0 +1,4 @@
+t:
+  adapter: postgresql
+  database: rails_enpit_test
+  username: postgres
