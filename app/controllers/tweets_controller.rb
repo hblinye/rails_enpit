@@ -5,7 +5,7 @@ class TweetsController < ApplicationController
   # GET /tweets.json
   def index
     @tweets = Tweet.all
-    @chart_data = Tweet.order('updated_at ASC').group(:updated_at).count
+    @chart_data = Tweet.group("tweets.created_at::date").count
   end
 
   # GET /tweets/1
