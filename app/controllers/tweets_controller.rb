@@ -6,6 +6,7 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.all
     @chart_data = Tweet.group("tweets.created_at::date").count
+    @column_data = Tweet.group("tweets.name").count
   end
 
   # GET /tweets/1
