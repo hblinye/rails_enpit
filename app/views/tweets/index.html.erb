@@ -28,3 +28,5 @@
 
 <%= link_to 'New Tweet', new_tweet_path %>
 <%= line_chart @chart_data %>
+<%= pie_chart @column_data %>
+<%= geo_chart [['Popularity'], ['東京', 10]], library: {region: 'JP', displayMode: 'regions', resolution: 'provinces'} %>
