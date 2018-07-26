@@ -16,13 +16,13 @@ class TweetsControllerTest < ActionController::TestCase
 #    assert_response :success
 #  end
 
-  test "should create tweet" do
-    assert_difference('Tweet.count') do
-      post :create, name: @tweet.name, tweet: { tweet: @tweet.tweet }
-    end
+#  test "should create tweet" do
+#    assert_difference('Tweet.count') do
+#      post :create, name: @tweet.name, tweet: { tweet: @tweet.tweet }
+#    end
 
     # assert_redirected_to tweet_path(assigns(:tweet))
-  end
+#  end
 
 #  test "should show tweet" do
 #    get :show, id: @tweet
