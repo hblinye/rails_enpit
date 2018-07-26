@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
-
+  before_action :logged_in_user
   # GET /tweets
   # GET /tweets.json
   def index
@@ -26,7 +26,9 @@ class TweetsController < ApplicationController
   # POST /tweets
   # POST /tweets.json
   def create
+    name = params[:name]
     @tweet = Tweet.new(tweet_params)
+    @tweet.name = name
 
     respond_to do |format|
       if @tweet.save
@@ -71,6 +73,6 @@ class TweetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tweet_params
-      params.require(:tweet).permit(:name, :tweet)
+      params.require(:tweet).permit(:tweet)
     end
 end
