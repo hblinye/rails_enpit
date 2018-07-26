@@ -9,6 +9,7 @@
   <strong>Tweet:</strong>
   <%= @tweet.tweet %>
 </p>
-
+<% if current_user.name == @tweet.name %>
 <%= link_to 'Edit', edit_tweet_path(@tweet) %> |
+<% end%>
 <%= link_to 'Back', tweets_path %>

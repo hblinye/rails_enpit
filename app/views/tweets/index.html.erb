@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h3>User:<%=current_user.name %></h3>
 <h1>Listing Tweets</h1>
 
 <table>
@@ -17,8 +17,10 @@
         <td><%= tweet.name %></td>
         <td><%= tweet.tweet %></td>
         <td><%= link_to 'Show', tweet %></td>
+	<% if current_user.name == tweet.name %>
         <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
         <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<% end %>
       </tr>
     <% end %>
   </tbody>
