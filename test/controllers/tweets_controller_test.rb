@@ -34,16 +34,16 @@ class TweetsControllerTest < ActionController::TestCase
 #    assert_response :success
 #  end
 
-  test "should update tweet" do
-    patch :update, id: @tweet, tweet: { name: @tweet.name, tweet: @tweet.tweet }
-    assert_redirected_to tweet_path(assigns(:tweet))
-  end
+#  test "should update tweet" do
+#    patch :update, id: @tweet, tweet: { name: @tweet.name, tweet: @tweet.tweet }
+#    assert_redirected_to tweet_path(assigns(:tweet))
+#  end
 
-  test "should destroy tweet" do
-    assert_difference('Tweet.count', -1) do
-      delete :destroy, id: @tweet
-    end
+#  test "should destroy tweet" do
+#    assert_difference('Tweet.count', -1) do
+#      delete :destroy, id: @tweet
+#    end
 
-    assert_redirected_to tweets_path
-  end
+#    assert_redirected_to tweets_path
+#  end
 end
