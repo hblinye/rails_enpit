@@ -1,3 +1,35 @@
 // Place all the styles related to the tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.tw-container, .tw-table{
+  width:100%;
+}
+.leftc, .rightc, .tw-chart{
+  float:left;
+  text-align:center;
+  width:100%;
+}
+.tw-chart{
+  text-align:center;
+}
+@media all and (min-width: 480px){
+.tw-chart{
+  width:50%;
+}
+}
+@media all and (min-width: 800px){
+.twcontainer{
+  margin:auto;
+  width:80%;
+}
+.leftc{
+  width:49%;
+}
+.rightc{
+  width:50%;
+  border-left:1px solid #eee
+}
+.tw-chart{
+  width:100%;
+}
+}
