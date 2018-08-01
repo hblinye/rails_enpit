@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
+<center><h1>コラボレイティブ開発特論</h1></center>
+<center><h3>delbuger</h3></center><div class="twcontainer">
+<div class="leftc">
 <h3>User:<%=current_user.name %></h3>
-<h1>Listing Tweets</h1>
-
-<table>
+<h2>Listing Tweets</h2>
+<%= link_to 'New Tweet', new_tweet_path %>
+<table class="tw-table">
   <thead>
     <tr>
       <th>Name</th>
@@ -27,8 +30,9 @@
 </table>
 
 <br>
-
-<%= link_to 'New Tweet', new_tweet_path %>
-<%= line_chart @chart_data %>
-<%= pie_chart @column_data %>
-<%= geo_chart @pref_data, library: {region: 'JP', displayMode: 'regions', resolution: 'provinces'} %>
+</div>
+<div class="rightc">
+<div class="tw-chart"><%= line_chart @chart_data %></div>
+<div class="tw-chart"><%= pie_chart @column_data %></div>
+</div>
+</div>
