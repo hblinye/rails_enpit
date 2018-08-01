@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
   def index
     @users = User.all
+    @pref_data = User.group("users.birthplace").count
   end
 
   # GET /users/1
