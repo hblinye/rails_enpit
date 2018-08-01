@@ -7,7 +7,6 @@ class TweetsController < ApplicationController
     @tweets = Tweet.all
     @chart_data = Tweet.group("tweets.created_at::date").count
     @column_data = Tweet.group("tweets.name").count
-    @pref_data = User.group("users.birthplace").count
   end
 
   # GET /tweets/1
